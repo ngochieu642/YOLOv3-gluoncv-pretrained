@@ -64,7 +64,6 @@ while(capture.isOpened()):
 
         #Run detection, just use net(rgb_nd) if you are not using GPU
         class_IDs, scores, bounding_boxes = net(rgb_nd.as_in_context(mx.gpu(0)))
-        availabelObject = 0
 
         #Draw things
         usedFrame = draw_box(frame,bounding_boxes,class_IDs,scores,1)
